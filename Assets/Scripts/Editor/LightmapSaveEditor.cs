@@ -2,29 +2,32 @@
 using UnityEditor;
 using System.Collections;
 
-[CustomEditor(typeof(LightmapSave))]
-public class LightmapSaveEditor : Editor
+namespace orisox.com
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(LightmapSave))]
+    public class LightmapSaveEditor : Editor
     {
-        base.OnInspectorGUI();
-
-        var Obj = target as LightmapSave;
-
-        if (GUILayout.Button("Bake Lightmap Async"))
+        public override void OnInspectorGUI()
         {
-            Lightmapping.giWorkflowMode = Lightmapping.GIWorkflowMode.OnDemand;
-            UnityEditor.Lightmapping.BakeAsync();
-        }
+            base.OnInspectorGUI();
 
-        if (GUILayout.Button("Save"))
-        {
-            Obj.Save();
-        }
+            var Obj = target as LightmapSave;
 
-        if (GUILayout.Button("Clear"))
-        {
-            Obj.Clear();
+            if (GUILayout.Button("Bake Lightmap Async"))
+            {
+                Lightmapping.giWorkflowMode = Lightmapping.GIWorkflowMode.OnDemand;
+                UnityEditor.Lightmapping.BakeAsync();
+            }
+
+            if (GUILayout.Button("Save"))
+            {
+                Obj.Save();
+            }
+
+            if (GUILayout.Button("Clear"))
+            {
+                Obj.Clear();
+            }
         }
     }
 }
