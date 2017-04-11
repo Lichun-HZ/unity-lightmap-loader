@@ -2,6 +2,16 @@
 
 load multiple lightmaps at runtime
 
+## features
+
+* save lightmap datas to prefabs
+* load multiple lightmaps in single scene at runtime
+
+[watch demo here](https://orisox.com/2017/03/28/unity-load-multiple-lightmaps-at-runtime/load-multiple-lightmaps.mp4)
+<video width="480" height="360" autoplay loop controls>
+    <source src="https://orisox.com/2017/03/28/unity-load-multiple-lightmaps-at-runtime/load-multiple-lightmaps.mp4">
+</video>
+
 ## usage
 
 * attach LightmapSave.cs script to models that need bake lightmap
